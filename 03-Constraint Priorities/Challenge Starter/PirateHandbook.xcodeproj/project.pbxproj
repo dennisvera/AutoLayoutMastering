@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B47952DC1E36BE9C00D91815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47952DB1E36BE9C00D91815 /* AppDelegate.swift */; };
-		B47952DE1E36BE9C00D91815 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47952DD1E36BE9C00D91815 /* ViewController.swift */; };
-		B47952E11E36BE9C00D91815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47952DF1E36BE9C00D91815 /* Main.storyboard */; };
-		B47952E31E36BE9C00D91815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B47952E21E36BE9C00D91815 /* Assets.xcassets */; };
-		B47952E61E36BE9C00D91815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B47952E41E36BE9C00D91815 /* LaunchScreen.storyboard */; };
+		B48140A11DCA9AB200F6847C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48140A01DCA9AB200F6847C /* MapViewController.swift */; };
+		B4A9F5701DC8E8110031229A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A9F56F1DC8E8110031229A /* AppDelegate.swift */; };
+		B4A9F5721DC8E8110031229A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A9F5711DC8E8110031229A /* MenuViewController.swift */; };
+		B4A9F5751DC8E8110031229A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A9F5731DC8E8110031229A /* Main.storyboard */; };
+		B4A9F5771DC8E8110031229A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A9F5761DC8E8110031229A /* Assets.xcassets */; };
+		B4A9F57A1DC8E8110031229A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A9F5781DC8E8110031229A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B47952D81E36BE9C00D91815 /* Constraint Inequalities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Constraint Inequalities.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B47952DB1E36BE9C00D91815 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B47952DD1E36BE9C00D91815 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B47952E01E36BE9C00D91815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B47952E21E36BE9C00D91815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B47952E51E36BE9C00D91815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B47952E71E36BE9C00D91815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B48140A01DCA9AB200F6847C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B4A9F56C1DC8E8110031229A /* PirateHandbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PirateHandbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A9F56F1DC8E8110031229A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4A9F5711DC8E8110031229A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B4A9F5741DC8E8110031229A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B4A9F5761DC8E8110031229A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4A9F5791DC8E8110031229A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4A9F57B1DC8E8110031229A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B47952D51E36BE9C00D91815 /* Frameworks */ = {
+		B4A9F5691DC8E8110031229A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,73 +37,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B47952CF1E36BE9C00D91815 = {
+		B4A9F5631DC8E8110031229A = {
 			isa = PBXGroup;
 			children = (
-				B47952DA1E36BE9C00D91815 /* Constraint Inequalities */,
-				B47952D91E36BE9C00D91815 /* Products */,
+				B4A9F56E1DC8E8110031229A /* PirateHandbook */,
+				B4A9F56D1DC8E8110031229A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B47952D91E36BE9C00D91815 /* Products */ = {
+		B4A9F56D1DC8E8110031229A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B47952D81E36BE9C00D91815 /* Constraint Inequalities.app */,
+				B4A9F56C1DC8E8110031229A /* PirateHandbook.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B47952DA1E36BE9C00D91815 /* Constraint Inequalities */ = {
+		B4A9F56E1DC8E8110031229A /* PirateHandbook */ = {
 			isa = PBXGroup;
 			children = (
-				B47952DB1E36BE9C00D91815 /* AppDelegate.swift */,
-				B47952DD1E36BE9C00D91815 /* ViewController.swift */,
-				B47952DF1E36BE9C00D91815 /* Main.storyboard */,
-				B47952E21E36BE9C00D91815 /* Assets.xcassets */,
-				B47952E41E36BE9C00D91815 /* LaunchScreen.storyboard */,
-				B47952E71E36BE9C00D91815 /* Info.plist */,
+				B4A9F56F1DC8E8110031229A /* AppDelegate.swift */,
+				B4A9F5711DC8E8110031229A /* MenuViewController.swift */,
+				B48140A01DCA9AB200F6847C /* MapViewController.swift */,
+				B4A9F5731DC8E8110031229A /* Main.storyboard */,
+				B4A9F5761DC8E8110031229A /* Assets.xcassets */,
+				B4A9F5781DC8E8110031229A /* LaunchScreen.storyboard */,
+				B4A9F57B1DC8E8110031229A /* Info.plist */,
 			);
-			path = "Constraint Inequalities";
+			path = PirateHandbook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B47952D71E36BE9C00D91815 /* Constraint Inequalities */ = {
+		B4A9F56B1DC8E8110031229A /* PirateHandbook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B47952EA1E36BE9C00D91815 /* Build configuration list for PBXNativeTarget "Constraint Inequalities" */;
+			buildConfigurationList = B4A9F57E1DC8E8110031229A /* Build configuration list for PBXNativeTarget "PirateHandbook" */;
 			buildPhases = (
-				B47952D41E36BE9C00D91815 /* Sources */,
-				B47952D51E36BE9C00D91815 /* Frameworks */,
-				B47952D61E36BE9C00D91815 /* Resources */,
+				B4A9F5681DC8E8110031229A /* Sources */,
+				B4A9F5691DC8E8110031229A /* Frameworks */,
+				B4A9F56A1DC8E8110031229A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Constraint Inequalities";
-			productName = "Constraint Inequalities";
-			productReference = B47952D81E36BE9C00D91815 /* Constraint Inequalities.app */;
+			name = PirateHandbook;
+			productName = PirateHandbook;
+			productReference = B4A9F56C1DC8E8110031229A /* PirateHandbook.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B47952D01E36BE9C00D91815 /* Project object */ = {
+		B4A9F5641DC8E8110031229A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Ray Wenderlich";
+				ORGANIZATIONNAME = "Razeware LLC";
 				TargetAttributes = {
-					B47952D71E36BE9C00D91815 = {
-						CreatedOnToolsVersion = 8.2.1;
+					B4A9F56B1DC8E8110031229A = {
+						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = K24N6NL7FA;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = B47952D31E36BE9C00D91815 /* Build configuration list for PBXProject "Constraint Inequalities" */;
+			buildConfigurationList = B4A9F5671DC8E8110031229A /* Build configuration list for PBXProject "PirateHandbook" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -109,54 +112,55 @@
 				en,
 				Base,
 			);
-			mainGroup = B47952CF1E36BE9C00D91815;
-			productRefGroup = B47952D91E36BE9C00D91815 /* Products */;
+			mainGroup = B4A9F5631DC8E8110031229A;
+			productRefGroup = B4A9F56D1DC8E8110031229A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B47952D71E36BE9C00D91815 /* Constraint Inequalities */,
+				B4A9F56B1DC8E8110031229A /* PirateHandbook */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B47952D61E36BE9C00D91815 /* Resources */ = {
+		B4A9F56A1DC8E8110031229A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B47952E61E36BE9C00D91815 /* LaunchScreen.storyboard in Resources */,
-				B47952E31E36BE9C00D91815 /* Assets.xcassets in Resources */,
-				B47952E11E36BE9C00D91815 /* Main.storyboard in Resources */,
+				B4A9F57A1DC8E8110031229A /* LaunchScreen.storyboard in Resources */,
+				B4A9F5771DC8E8110031229A /* Assets.xcassets in Resources */,
+				B4A9F5751DC8E8110031229A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B47952D41E36BE9C00D91815 /* Sources */ = {
+		B4A9F5681DC8E8110031229A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B47952DE1E36BE9C00D91815 /* ViewController.swift in Sources */,
-				B47952DC1E36BE9C00D91815 /* AppDelegate.swift in Sources */,
+				B4A9F5721DC8E8110031229A /* MenuViewController.swift in Sources */,
+				B48140A11DCA9AB200F6847C /* MapViewController.swift in Sources */,
+				B4A9F5701DC8E8110031229A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B47952DF1E36BE9C00D91815 /* Main.storyboard */ = {
+		B4A9F5731DC8E8110031229A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B47952E01E36BE9C00D91815 /* Base */,
+				B4A9F5741DC8E8110031229A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B47952E41E36BE9C00D91815 /* LaunchScreen.storyboard */ = {
+		B4A9F5781DC8E8110031229A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B47952E51E36BE9C00D91815 /* Base */,
+				B4A9F5791DC8E8110031229A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -164,7 +168,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B47952E81E36BE9C00D91815 /* Debug */ = {
+		B4A9F57C1DC8E8110031229A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -183,6 +187,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -204,7 +209,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -214,7 +219,7 @@
 			};
 			name = Debug;
 		};
-		B47952E91E36BE9C00D91815 /* Release */ = {
+		B4A9F57D1DC8E8110031229A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -233,6 +238,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -248,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -257,27 +263,27 @@
 			};
 			name = Release;
 		};
-		B47952EB1E36BE9C00D91815 /* Debug */ = {
+		B4A9F57F1DC8E8110031229A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K24N6NL7FA;
-				INFOPLIST_FILE = "Constraint Inequalities/Info.plist";
+				INFOPLIST_FILE = PirateHandbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.Constraint-Inequalities";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.PirateHandbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		B47952EC1E36BE9C00D91815 /* Release */ = {
+		B4A9F5801DC8E8110031229A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K24N6NL7FA;
-				INFOPLIST_FILE = "Constraint Inequalities/Info.plist";
+				INFOPLIST_FILE = PirateHandbook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.Constraint-Inequalities";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.PirateHandbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -286,25 +292,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B47952D31E36BE9C00D91815 /* Build configuration list for PBXProject "Constraint Inequalities" */ = {
+		B4A9F5671DC8E8110031229A /* Build configuration list for PBXProject "PirateHandbook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B47952E81E36BE9C00D91815 /* Debug */,
-				B47952E91E36BE9C00D91815 /* Release */,
+				B4A9F57C1DC8E8110031229A /* Debug */,
+				B4A9F57D1DC8E8110031229A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B47952EA1E36BE9C00D91815 /* Build configuration list for PBXNativeTarget "Constraint Inequalities" */ = {
+		B4A9F57E1DC8E8110031229A /* Build configuration list for PBXNativeTarget "PirateHandbook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B47952EB1E36BE9C00D91815 /* Debug */,
-				B47952EC1E36BE9C00D91815 /* Release */,
+				B4A9F57F1DC8E8110031229A /* Debug */,
+				B4A9F5801DC8E8110031229A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B47952D01E36BE9C00D91815 /* Project object */;
+	rootObject = B4A9F5641DC8E8110031229A /* Project object */;
 }
