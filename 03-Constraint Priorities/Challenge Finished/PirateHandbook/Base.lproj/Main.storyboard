@@ -129,18 +129,18 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="LU6-I3-8TE" firstAttribute="top" secondItem="hec-km-iq2" secondAttribute="top" id="GP3-kl-rui"/>
-                                            <constraint firstAttribute="trailing" secondItem="LU6-I3-8TE" secondAttribute="trailing" id="Vwo-jg-ppz"/>
+                                            <constraint firstItem="LU6-I3-8TE" firstAttribute="trailing" secondItem="hec-km-iq2" secondAttribute="trailing" id="Vwo-jg-ppz"/>
                                             <constraint firstAttribute="bottom" secondItem="LU6-I3-8TE" secondAttribute="bottom" id="c7U-Rj-waM"/>
                                             <constraint firstItem="LU6-I3-8TE" firstAttribute="leading" secondItem="hec-km-iq2" secondAttribute="leading" id="yRN-Uk-jIX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="he6-k9-BCV" firstAttribute="trailing" secondItem="KjW-X7-vxz" secondAttribute="trailing" id="Gl2-zc-8zH"/>
+                                    <constraint firstAttribute="trailing" secondItem="he6-k9-BCV" secondAttribute="trailing" id="Gl2-zc-8zH"/>
                                     <constraint firstItem="hec-km-iq2" firstAttribute="top" secondItem="KjW-X7-vxz" secondAttribute="top" priority="998" constant="1610" id="Ptg-QX-dPk"/>
                                     <constraint firstItem="he6-k9-BCV" firstAttribute="top" secondItem="KjW-X7-vxz" secondAttribute="top" id="Row-kB-Vlw"/>
                                     <constraint firstItem="he6-k9-BCV" firstAttribute="leading" secondItem="KjW-X7-vxz" secondAttribute="leading" id="ZpZ-ec-dyS"/>
-                                    <constraint firstItem="he6-k9-BCV" firstAttribute="bottom" secondItem="KjW-X7-vxz" secondAttribute="bottom" id="oHl-CS-eev"/>
+                                    <constraint firstAttribute="bottom" secondItem="he6-k9-BCV" secondAttribute="bottom" id="oHl-CS-eev"/>
                                     <constraint firstItem="hec-km-iq2" firstAttribute="leading" secondItem="KjW-X7-vxz" secondAttribute="leading" priority="998" constant="1610" id="uyO-uu-fBJ"/>
                                 </constraints>
                                 <connections>
@@ -169,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFy-c5-CdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="38"/>
+            <point key="canvasLocation" x="986" y="137"/>
         </scene>
     </scenes>
     <resources>
