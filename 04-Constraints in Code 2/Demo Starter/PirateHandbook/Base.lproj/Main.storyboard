@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SeK-Jh-KjF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SeK-Jh-KjF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -192,10 +192,26 @@
                                 <rect key="frame" x="0.0" y="-699" width="1366" height="1366"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1nK-NR-4pe">
+                                <rect key="frame" x="16" y="278" width="343" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" placeholder="YES" id="Sr0-ty-xHK"/>
+                                    <constraint firstAttribute="height" constant="110" id="b94-1Y-39d"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1nK-NR-4pe" firstAttribute="centerY" secondItem="jXG-WD-eyh" secondAttribute="centerY" id="HMp-fQ-jLC"/>
+                            <constraint firstItem="1nK-NR-4pe" firstAttribute="centerX" secondItem="jXG-WD-eyh" secondAttribute="centerX" id="IDt-Yz-vC5"/>
+                            <constraint firstItem="1nK-NR-4pe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jXG-WD-eyh" secondAttribute="leadingMargin" id="TZC-ez-SJJ"/>
+                            <constraint firstItem="1nK-NR-4pe" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="jXG-WD-eyh" secondAttribute="trailingMargin" id="p5G-pL-3to"/>
+                        </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="stackView" destination="1nK-NR-4pe" id="fvV-du-IHx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtW-6J-LSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

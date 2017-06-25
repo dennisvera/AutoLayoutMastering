@@ -23,4 +23,36 @@
 import UIKit
 
 class WeatherViewController: UIViewController {
+    @IBOutlet var stackView: UIStackView!
+    let daysToForecast = 3
+    let gap: CGFloat = 8
+    var imageViews: [UIImageView] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        for day in 0..<daysToForecast {
+            let weatherImage: UIImageView
+            // This would be some logic from a server to determine what image to show - we'll fake it by using one of each
+            switch day {
+            case 0:
+                weatherImage = UIImageView(image: #imageLiteral(resourceName: "weather-sun"))
+            case 1:
+                weatherImage = UIImageView(image: #imageLiteral(resourceName: "weather-windy"))
+            case 2:
+                weatherImage = UIImageView(image: #imageLiteral(resourceName: "weather-thunderstorm"))
+            default:
+                fatalError()
+            }
+            weatherImage.translatesAutoresizingMaskIntoConstraints = false
+            stackView.addArrangedSubview(weatherImage)
+            imageViews.append(weatherImage)
+        }
+        
+        for imageView in imageViews {
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
+        }
+        stackView.distribution = .fillEqually
+        stackView.spacing = gap
+    }
 }
