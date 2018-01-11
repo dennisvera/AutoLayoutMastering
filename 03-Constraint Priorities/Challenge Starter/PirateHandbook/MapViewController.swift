@@ -23,16 +23,48 @@
 import UIKit
 
 class MapViewController: UIViewController {
-  @IBOutlet weak var marker: UIView!
-  @IBOutlet weak var markerImageView: UIImageView!
-  
-  func decideArrowOrX() {
-    // TODO: write code to decide if the marker should be an Arrow or an X
-  }
-  
-  func angleBetween(_ firstPoint: CGPoint, _ secondPoint: CGPoint) -> CGFloat {
-    let deltaX = secondPoint.x - firstPoint.x
-    let deltaY = secondPoint.y - firstPoint.y
-    return atan2(deltaY, deltaX)
-  }
+    
+    @IBOutlet weak var marker: UIView!
+    @IBOutlet weak var markerImageView: UIImageView!
+    
+    @IBOutlet weak var desiredXConstraint: NSLayoutConstraint!
+    @IBOutlet weak var desiredYConstraint: NSLayoutConstraint!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        marker.layoutIfNeeded()
+        decideArrowOrX()
+    }
+    
+    func decideArrowOrX() {
+        let currentPoint = marker.frame.origin
+        let desiredPoint = CGPoint(x: desiredXConstraint.constant,
+                                   y: desiredYConstraint.constant)
+        
+        if currentPoint == desiredPoint {
+            markerImageView.image = UIImage(named: "x")
+            markerImageView.transform = CGAffineTransform.identity
+        } else {
+            markerImageView.image = UIImage(named: "arrow")
+            
+            let angle = angleBetween(currentPoint, desiredPoint)
+            markerImageView.transform = CGAffineTransform(rotationAngle: angle)
+        }
+    }
+        
+        func angleBetween(_ firstPoint: CGPoint, _ secondPoint: CGPoint) -> CGFloat {
+            let deltaX = secondPoint.x - firstPoint.x
+            let deltaY = secondPoint.y - firstPoint.y
+            
+            return atan2(deltaY, deltaX)
+        }
+    
+}
+
+extension MapViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        decideArrowOrX()
+    }
 }

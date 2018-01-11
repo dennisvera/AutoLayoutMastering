@@ -124,7 +124,7 @@
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="he6-k9-BCV">
                                         <rect key="frame" x="0.0" y="0.0" width="2500" height="2500"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hec-km-iq2">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hec-km-iq2" userLabel="Marker">
                                         <rect key="frame" x="308" y="600" width="67" height="67"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="999" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="LU6-I3-8TE">
@@ -166,6 +166,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="desiredXConstraint" destination="iVS-hK-jem" id="p9n-vY-dc8"/>
+                        <outlet property="desiredYConstraint" destination="SDO-eN-OmL" id="k7M-uh-3pK"/>
                         <outlet property="marker" destination="hec-km-iq2" id="oq6-gW-nYG"/>
                         <outlet property="markerImageView" destination="LU6-I3-8TE" id="ypQ-KE-hTd"/>
                     </connections>
