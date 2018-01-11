@@ -24,18 +24,14 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     
+    @IBOutlet var stackView: UIStackView!
+    
     let daysToForecast = 3
     let gap: CGFloat = 8
     var imageViews: [UIImageView] = []
-    var containerGuide = UILayoutGuide()
-    var spacerGuides: [UILayoutGuide] = []
-    var imageConstraints: [NSLayoutConstraint] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        containerGuide.identifier = "container"
-        view.addLayoutGuide(containerGuide)
         
         for day in 0..<daysToForecast {
             let weatherImage: UIImageView
@@ -52,67 +48,16 @@ class WeatherViewController: UIViewController {
             }
             
             weatherImage.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(weatherImage)
+            stackView.addArrangedSubview(weatherImage)
             imageViews.append(weatherImage)
-            
-            if day > 0 {
-                let spacer = UILayoutGuide()
-                spacer.identifier = "spacer\(day)"
-                view.addLayoutGuide(spacer)
-                spacerGuides.append(spacer)
-            }
-        }
-        setupImageConstraints(forSize: view.bounds.size)
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        setupImageConstraints(forSize: size)
-    }
-    
-    private func setupImageConstraints(forSize size: CGSize) {
-        NSLayoutConstraint.deactivate(imageConstraints)
-        imageConstraints.removeAll()
-        
-        var firstImageView: UIImageView?
-        var firstSpacer: UILayoutGuide?
-        var previousAnchor = containerGuide.leadingAnchor
-        
-        for day in 0..<daysToForecast {
-            let imageView = imageViews[day]
-            imageConstraints.append(imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor))
-            imageConstraints.append(imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor))
-            
-            if let firstImageView = firstImageView {
-                imageConstraints.append(imageView.widthAnchor.constraint(equalTo: firstImageView.widthAnchor))
-            } else {
-                firstImageView = imageView
-            }
-            
-            imageConstraints.append(imageView.leadingAnchor.constraint(equalTo: previousAnchor))
-            if day < daysToForecast - 1 {
-                let trailingSpacer = spacerGuides[day]
-                imageConstraints.append(imageView.trailingAnchor.constraint(equalTo: trailingSpacer.leadingAnchor))
-                
-                if let firstSpacer = firstSpacer {
-                    imageConstraints.append(trailingSpacer.widthAnchor.constraint(equalTo: firstSpacer.widthAnchor))
-                } else {
-                    firstSpacer = trailingSpacer
-                    let spacerWidthConstraint = trailingSpacer.widthAnchor.constraint(equalToConstant: gap)
-                    spacerWidthConstraint.priority = 749
-                    imageConstraints.append(spacerWidthConstraint)
-                }
-                previousAnchor = trailingSpacer.trailingAnchor
-            } else {
-                imageConstraints.append(imageView.trailingAnchor.constraint(equalTo: containerGuide.trailingAnchor))
-                previousAnchor = imageView.trailingAnchor
-            }
         }
         
-        imageConstraints.append(containerGuide.centerXAnchor.constraint(equalTo: view.centerXAnchor))
-        imageConstraints.append(containerGuide.leadingAnchor.constraint(greaterThanOrEqualTo: view.leadingAnchor))
-        imageConstraints.append(containerGuide.trailingAnchor.constraint(lessThanOrEqualTo: view.trailingAnchor))
-        NSLayoutConstraint.activate(imageConstraints)
+        for imageView in imageViews {
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
+        }
+        
+        stackView.distribution = .fillEqually
+        stackView.spacing = 8
     }
     
 }
