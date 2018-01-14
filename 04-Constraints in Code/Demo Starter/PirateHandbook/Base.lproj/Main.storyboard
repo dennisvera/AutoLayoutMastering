@@ -94,16 +94,60 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-windy" translatesAutoresizingMaskIntoConstraints="NO" id="JGU-hh-7OD">
+                                <rect key="frame" x="455" y="273.5" width="120" height="120"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-sun" translatesAutoresizingMaskIntoConstraints="NO" id="JxH-fW-eAg">
+                                <rect key="frame" x="455" y="273.5" width="120" height="120"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="brV-7X-jKq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1kQ-zC-p0d"/>
+                            <constraint firstItem="JxH-fW-eAg" firstAttribute="leading" secondItem="brV-7X-jKq" secondAttribute="trailing" constant="40" id="3YM-Te-pLK">
+                                <variation key="widthClass=compact" constant="100"/>
+                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="brV-7X-jKq" secondAttribute="trailing" priority="999" constant="20" id="CXz-6M-2Um"/>
+                            <constraint firstItem="JxH-fW-eAg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EDO-7d-Z6h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6eG-YA-K9i" secondAttribute="trailing" id="Htl-Y1-78D"/>
+                            <constraint firstItem="JGU-hh-7OD" firstAttribute="leading" secondItem="KdM-zw-jch" secondAttribute="trailing" constant="59" id="J7W-AQ-8vZ">
+                                <variation key="heightClass=regular" constant="100"/>
+                            </constraint>
                             <constraint firstItem="brV-7X-jKq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="M4C-AG-31p"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6eG-YA-K9i" secondAttribute="bottom" constant="20" id="VKV-hf-pBw"/>
+                            <constraint firstItem="JGU-hh-7OD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZlT-AI-hnG"/>
                             <constraint firstItem="6eG-YA-K9i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rJ7-2X-Xss"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JGU-hh-7OD"/>
+                                <exclude reference="JxH-fW-eAg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3YM-Te-pLK"/>
+                                <exclude reference="EDO-7d-Z6h"/>
+                                <exclude reference="J7W-AQ-8vZ"/>
+                                <exclude reference="ZlT-AI-hnG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="JGU-hh-7OD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="J7W-AQ-8vZ"/>
+                                <include reference="ZlT-AI-hnG"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="JxH-fW-eAg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3YM-Te-pLK"/>
+                                <include reference="EDO-7d-Z6h"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="FGG-Pb-8jW"/>
                 </viewController>
@@ -198,7 +242,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6h6-BL-ljx">
-                                <rect key="frame" x="16" y="278" width="343" height="110"/>
+                                <rect key="frame" x="16" y="278.5" width="343" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="C2d-nB-y5A"/>
                                     <constraint firstAttribute="width" constant="343" placeholder="YES" id="ljl-5a-RU9"/>
@@ -246,5 +290,7 @@
         <image name="background" width="1366" height="1366"/>
         <image name="button" width="44" height="41"/>
         <image name="map" width="2500" height="2500"/>
+        <image name="weather-sun" width="120" height="120"/>
+        <image name="weather-windy" width="120" height="120"/>
     </resources>
 </document>
