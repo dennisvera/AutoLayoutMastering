@@ -22,16 +22,12 @@
 
 import UIKit
 
-@UIApplicationMain
-
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  var window: UIWindow?
-  
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+class AppearanceManager {
+  class func setupAppearance() {
+    let navBarAppearance = UINavigationBar.appearance(for: UITraitCollection(horizontalSizeClass: .unspecified))
+    navBarAppearance.titleTextAttributes = [NSFontAttributeName: UIFont(name: "MarkerFelt-Wide", size: 22)!]
     
-    AppearanceManager.setupAppearance()
-    
-    return true
+    let navBarCompactAppearance = UINavigationBar.appearance(for: UITraitCollection(horizontalSizeClass: .compact))
+    navBarCompactAppearance.titleTextAttributes = [NSFontAttributeName: UIFont(name: "MarkerFelt-Thin", size: 14)!]
   }
-    
 }

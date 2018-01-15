@@ -22,16 +22,14 @@
 
 import UIKit
 
-@UIApplicationMain
-
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  var window: UIWindow?
-  
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
-    AppearanceManager.setupAppearance()
-    
-    return true
+class MenuViewController: UIViewController {
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: false)
   }
-    
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(false, animated: true)
+  }
 }
