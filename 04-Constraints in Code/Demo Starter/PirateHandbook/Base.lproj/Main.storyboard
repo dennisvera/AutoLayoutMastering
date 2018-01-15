@@ -107,63 +107,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-sun" translatesAutoresizingMaskIntoConstraints="NO" id="7CT-LL-b06">
-                                <rect key="frame" x="520" y="147" width="120" height="120"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-sun" translatesAutoresizingMaskIntoConstraints="NO" id="JxH-fW-eAg">
-                                <rect key="frame" x="494" y="308" width="120" height="120"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="brV-7X-jKq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1kQ-zC-p0d"/>
-                            <constraint firstItem="JxH-fW-eAg" firstAttribute="leading" secondItem="brV-7X-jKq" secondAttribute="trailing" constant="40" id="3YM-Te-pLK">
-                                <variation key="widthClass=compact" constant="100"/>
-                            </constraint>
                             <constraint firstAttribute="trailing" secondItem="brV-7X-jKq" secondAttribute="trailing" priority="999" constant="20" id="CXz-6M-2Um"/>
-                            <constraint firstItem="JxH-fW-eAg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EDO-7d-Z6h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6eG-YA-K9i" secondAttribute="trailing" id="Htl-Y1-78D"/>
                             <constraint firstItem="brV-7X-jKq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="M4C-AG-31p"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6eG-YA-K9i" secondAttribute="bottom" constant="20" id="VKV-hf-pBw"/>
                             <constraint firstItem="6eG-YA-K9i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rJ7-2X-Xss"/>
-                            <constraint firstItem="7CT-LL-b06" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sWx-Jf-IYe"/>
-                            <constraint firstItem="7CT-LL-b06" firstAttribute="leading" secondItem="nJz-jB-zLh" secondAttribute="trailing" constant="99" id="uik-fj-cQX">
-                                <variation key="widthClass=regular" constant="100"/>
-                            </constraint>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="7CT-LL-b06"/>
-                                <exclude reference="JxH-fW-eAg"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="sWx-Jf-IYe"/>
-                                <exclude reference="uik-fj-cQX"/>
-                                <exclude reference="3YM-Te-pLK"/>
-                                <exclude reference="EDO-7d-Z6h"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="JxH-fW-eAg"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="3YM-Te-pLK"/>
-                                <include reference="EDO-7d-Z6h"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=regular">
-                            <mask key="subviews">
-                                <include reference="7CT-LL-b06"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="sWx-Jf-IYe"/>
-                                <include reference="uik-fj-cQX"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="FGG-Pb-8jW"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="buttonStackView" destination="brV-7X-jKq" id="gYg-3Y-oF8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,7 +202,7 @@
         <!--Caribbean Weather Forecast-->
         <scene sceneID="8Rx-qt-QPW">
             <objects>
-                <viewController id="6Jx-G6-LuW" customClass="WeatherViewController" customModule="PirateHandbook" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherViewController" id="6Jx-G6-LuW" customClass="WeatherViewController" customModule="PirateHandbook" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="q2V-DE-uxa"/>
                         <viewControllerLayoutGuide type="bottom" id="von-Uc-7bF"/>
@@ -256,11 +215,37 @@
                                 <rect key="frame" x="0.0" y="-630" width="1366" height="1366"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VI7-nM-T8t">
+                                <rect key="frame" x="104.66666666666669" y="340.66666666666669" width="205" height="55"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-sun" translatesAutoresizingMaskIntoConstraints="NO" id="FqC-IZ-IVy">
+                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-windy" translatesAutoresizingMaskIntoConstraints="NO" id="Tzw-d7-8R7">
+                                        <rect key="frame" x="74.999999999999986" y="0.0" width="55.000000000000014" height="55"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather-thunderstorm" translatesAutoresizingMaskIntoConstraints="NO" id="qpq-ua-Y7P">
+                                        <rect key="frame" x="150" y="0.0" width="55" height="55"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VI7-nM-T8t" firstAttribute="centerY" secondItem="jXG-WD-eyh" secondAttribute="centerY" id="1K8-pf-pYy"/>
+                            <constraint firstItem="VI7-nM-T8t" firstAttribute="top" secondItem="q2V-DE-uxa" secondAttribute="bottom" priority="249" id="3tI-np-plR"/>
+                            <constraint firstItem="VI7-nM-T8t" firstAttribute="centerX" secondItem="jXG-WD-eyh" secondAttribute="centerX" id="EtC-dg-vgS"/>
+                            <constraint firstItem="VI7-nM-T8t" firstAttribute="leading" secondItem="jXG-WD-eyh" secondAttribute="leading" priority="249" id="OhE-O5-eOY"/>
+                            <constraint firstAttribute="trailing" secondItem="VI7-nM-T8t" secondAttribute="trailing" priority="249" id="j1O-9M-y8k"/>
+                            <constraint firstItem="von-Uc-7bF" firstAttribute="top" secondItem="VI7-nM-T8t" secondAttribute="bottom" priority="249" id="kLt-gX-W21"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Caribbean Weather Forecast" id="tsx-fu-qHw"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="yJk-4q-6C0" id="86W-io-R1y"/>
+                        <outlet property="stackView" destination="VI7-nM-T8t" id="t3F-g0-i9b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtW-6J-LSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,6 +275,8 @@
         <image name="background" width="1366" height="1366"/>
         <image name="button" width="44" height="40"/>
         <image name="map" width="2500" height="2500"/>
-        <image name="weather-sun" width="120" height="120"/>
+        <image name="weather-sun" width="55" height="55"/>
+        <image name="weather-thunderstorm" width="55" height="55"/>
+        <image name="weather-windy" width="55" height="55"/>
     </resources>
 </document>

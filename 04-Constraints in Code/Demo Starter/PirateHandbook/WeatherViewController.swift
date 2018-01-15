@@ -24,59 +24,29 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     
-    let daysToForecast = 3
-    let gap: CGFloat = 8
-    var imageViews: [UIImageView] = []
-    var imageConstraints: [NSLayoutConstraint] = []
-    let leftGapGuide = UILayoutGuide()
-    let rightGapGuide = UILayoutGuide()
+    @IBOutlet var backgroundImageView: UIImageView!
+    @IBOutlet var stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        for day in 0..<daysToForecast {
-            let weatherImage: UIImageView
-            // This would be some logic from a server to determine what image to show - we'll fake it by using one of each
-            switch day {
-            case 0:
-                weatherImage = UIImageView(image: #imageLiteral(resourceName: "weather-sun"))
-            case 1:
-                weatherImage = UIImageView(image: #imageLiteral(resourceName: "weather-windy"))
-            case 2:
-                weatherImage = UIImageView(image: #imageLiteral(resourceName: "weather-thunderstorm"))
-            default:
-                fatalError()
-            }
-            weatherImage.translatesAutoresizingMaskIntoConstraints = false
-            view.addSubview(weatherImage)
-            imageViews.append(weatherImage)
-        }
-        
-        for imageView in imageViews {
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
-        }
-        view.addLayoutGuide(leftGapGuide)
-        view.addLayoutGuide(rightGapGuide)
-        setupImageConstraints(forSizeClass: traitCollection.horizontalSizeClass)
+        setupImages(forTraitCollection: traitCollection)
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         super.willTransition(to: newCollection, with: coordinator)
-        if newCollection.horizontalSizeClass != traitCollection.horizontalSizeClass {
-            setupImageConstraints(forSizeClass: newCollection.horizontalSizeClass)
+        if newCollection.horizontalSizeClass != traitCollection.horizontalSizeClass || newCollection.verticalSizeClass != traitCollection.verticalSizeClass {
+            setupImages(forTraitCollection: newCollection)
         }
     }
     
-    private func setupImageConstraints(forSizeClass sizeClass: UIUserInterfaceSizeClass) {
-        NSLayoutConstraint.deactivate(imageConstraints)
-        imageConstraints.removeAll()
+    private func setupImages(forTraitCollection traitCollection: UITraitCollection) {
+        guard stackView.arrangedSubviews.count > 1 else { return }
         
-        let views: [String: Any] = ["monday": imageViews[0], "tuesday": imageViews[1], "wednesday": imageViews[2], "leftGapGuide": leftGapGuide, "rightGapGuide": rightGapGuide]
-        let imageWidth = imageViews[0].image!.imageAsset!.image(with: UITraitCollection(horizontalSizeClass: sizeClass)).size.width
-        let metrics = ["fullWidth": imageWidth, "smaller": imageWidth * 0.7, "bigGap": gap * 3, "gap": gap]
-        imageConstraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "|[leftGapGuide]-[monday(fullWidth@849)]-(bigGap)-[tuesday(smaller@849)]-(gap)-[wednesday(smaller@849)]-(gap)-[rightGapGuide(==leftGapGuide)]|", options: .alignAllBottom, metrics: metrics, views: views))
-        imageConstraints.append(imageViews[0].centerYAnchor.constraint(equalTo: view.centerYAnchor))
-        NSLayoutConstraint.activate(imageConstraints)
+        let compact = traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .compact
+        for subview in stackView.arrangedSubviews.suffix(from: 1) {
+            subview.isHidden = compact
+        }
     }
 }
 
